@@ -13,7 +13,7 @@ export const onHomePage: OnHomePageHandler = async () => {
       <Box>
         <Section>
           <Heading>Hello world!</Heading>
-          <Text>Below is a showcase of features in MetaMask Extension 12.5:</Text>
+          <Text>Below is a showcase of features in MetaMask Extension 12.5.</Text>
         </Section>
         <Section>
           <Heading>New Icon component!</Heading>
