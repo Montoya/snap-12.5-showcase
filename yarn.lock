@@ -16990,9 +16990,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"snap-showcase-2024-10-30@workspace:packages/snap":
+"snap-showcase@workspace:packages/snap":
   version: 0.0.0-use.local
-  resolution: "snap-showcase-2024-10-30@workspace:packages/snap"
+  resolution: "snap-showcase@workspace:packages/snap"
   dependencies:
     "@jest/globals": ^29.5.0
     "@metamask/auto-changelog": ^3.4.4

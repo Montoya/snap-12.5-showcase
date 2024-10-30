@@ -7,12 +7,12 @@
     "url": "https://github.com/Montoya/snap-12.5-showcase.git"
   },
   "source": {
-    "shasum": "At8Y4ng1YV6FWZUXqojeNKDt/bzNzmoFAqwFYXsdvUY=",
+    "shasum": "YscvMBosRNmdMs57I1Z0ICBNdbECZMYFgTOtGdy57xw=",
     "location": {
       "npm": {
         "filePath": "dist/bundle.js",
         "iconPath": "img/icon.svg",
-        "packageName": "snap-showcase-2024-10-30",
+        "packageName": "snap-showcase",
         "registry": "https://registry.npmjs.org/"
       }
     }

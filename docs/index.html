@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
   <head>
-      <title>Name Lookup Test</title>
+      <title>Snaps Showcase | MetaMask Extension 12.5</title>
       <meta charset="utf-8"/>
       <meta name="viewport" content="width=device-width"/>
-      <meta property="og:title" content="Name Lookup Test install page" />
+      <meta property="og:title" content="Snaps Showcase | MetaMask Extension 12.5" />
       <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre.min.css">
       <style type="text/css">
         body { 
@@ -85,20 +85,27 @@
   </head>
   <body>
     <div id="page">
-      <h1>Name Lookup Test</h1>
-      <p>Use [name].tld or scheme:[name] or schm:[name]</p>
+      <h1><span id="icon"><img src="snaps-showcase-icon.png" width="48" height="48" alt=""></span> Snaps Showcase</h1>
+      <p>This Snap demonstrates new features in MetaMask Extension 12.5:</p>
+      <ul>
+        <li>Custom dialogs</li>
+        <li>&lt;Footer&gt; component</li>
+        <li><code>snap_resolveInterface</code></li>
+        <li>&lt;Icon&gt; component</li>
+        <li>Buttons can now wrap Icons and Images!</li>
+      </ul>
       <p id="loading">Loading...</p>
-      <p>After installing the Snap, you can view the console of offscreen.html to see logs.</p>
+      <p>After installing the Snap, click the button to trigger a custom dialog, or view the Snap homepage to see icons and buttons with images.</p>
     </div>
     <div id="footer">
       Powered by <a href="https://metamask.io/snaps/">MetaMask Snaps</a> &bull; 
-      <a href="https://github.com/Montoya/name-lookup-test">Source Code</a>
+      <a href="https://github.com/Montoya/snap-12.5-showcase">Source Code</a>
     </div>
     
     <script type="text/javascript">
 
-const snapId = 'npm:name-lookup-test';
-const snapName = 'Name Lookup Test';
+const snapId = 'npm:snap-showcase';
+const snapName = 'Snap Showcase';
 const snapVersion = '0.1.0';  
 
 /* 
@@ -135,9 +142,19 @@ const MetaMaskFound = async (providerDetail) => {
           }); 
           if( Object.keys(snaps).includes(snapId) ) { 
             // the snap is installed and connected 
-            btn.textContent = "Installed!"; 
-            btn.onclick = null; 
-            btn.disabled = true; 
+            btn.textContent = "Launch dialog"; 
+            btn.onclick = async (event) => { 
+              const result = await provider.request({ 
+                method: 'wallet_invokeSnap', 
+                params: 
+                {
+                  snapId, 
+                  request: { 
+                    method: "hello",
+                  }
+                },
+              }); 
+            }; 
           }
           else { 
             // the snap was not installed 
@@ -167,16 +184,8 @@ window.onload = function() {
        * or prompt the user to choose which MetaMask flavor they want to use 
        * in case they have multiple MetaMask extensions installed at the same time
        */
-      if(providerDetail.info.rdns == "io.metamask") { 
-        /* this is MetaMask */
-        MetaMaskFound(providerDetail); 
-      }
-      else if(providerDetail.info.rdns == "io.metamask.flask") { 
+      if(providerDetail.info.rdns == "io.metamask.flask") { 
         /* this is MetaMask Flask */ 
-        MetaMaskFound(providerDetail); 
-      }
-      else if(providerDetail.info.rdns == "io.metamask.mmi") { 
-        /* this is MetaMask Institutional */ 
         MetaMaskFound(providerDetail); 
       }
     }
@@ -188,7 +197,7 @@ window.onload = function() {
     if("found"!==document.getElementById('loading').className) { 
       /* Assume MetaMask was not detected */
       document.getElementById('loading').textContent = ""; 
-      document.getElementById('loading').insertAdjacentHTML("afterbegin", "Please install <a href='https://metamask.io/'>MetaMask</a> first.");  
+      document.getElementById('loading').insertAdjacentHTML("afterbegin", "Please install <a href='https://docs.metamask.io/snaps/get-started/install-flask/'>MetaMask Flask</a> first.");  
     }
   }, 1000)
 
