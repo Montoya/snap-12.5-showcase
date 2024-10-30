@@ -1,17 +1,18 @@
 {
   "version": "0.1.0",
-  "description": "An example Snap written in TypeScript.",
-  "proposedName": "TypeScript Example",
+  "description": "Showcase of new Snaps features in MetaMask Extension 12.5",
+  "proposedName": "Snaps Showcase 12.5",
   "repository": {
     "type": "git",
-    "url": "https://github.com/MetaMask/template-snap-monorepo.git"
+    "url": "https://github.com/Montoya/snap-12.5-showcase.git"
   },
   "source": {
     "shasum": "X9pobn7XT2CgX4T9N6gcQP09HZhRlnDzNPN562ACt+k=",
     "location": {
       "npm": {
         "filePath": "dist/bundle.js",
-        "packageName": "snap",
+        "iconPath": "img/icon.svg",
+        "packageName": "snap-showcase-2024-10-30",
         "registry": "https://registry.npmjs.org/"
       }
     }

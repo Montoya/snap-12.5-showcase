@@ -1,15 +1,16 @@
 {
-  "name": "snap",
+  "name": "snap-showcase-2024-10-30",
   "version": "0.1.0",
-  "description": "The 'Hello, world!' of MetaMask Snaps, now written in TypeScript.",
+  "description": "Showcase of new Snaps features in MetaMask Extension 12.5",
   "repository": {
     "type": "git",
-    "url": "https://github.com/MetaMask/template-snap-monorepo.git"
+    "url": "https://github.com/Montoya/snap-12.5-showcase.git"
   },
   "license": "(MIT-0 OR Apache-2.0)",
   "main": "./dist/bundle.js",
   "files": [
     "dist/",
+    "img/",
     "snap.manifest.json"
   ],
   "scripts": {
