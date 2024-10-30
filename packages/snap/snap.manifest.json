@@ -7,7 +7,7 @@
     "url": "https://github.com/Montoya/snap-12.5-showcase.git"
   },
   "source": {
-    "shasum": "X9pobn7XT2CgX4T9N6gcQP09HZhRlnDzNPN562ACt+k=",
+    "shasum": "JgzjyGRJxAO7ubk3kscTeHKSUtYTrHI7VVi6iuEzOPY=",
     "location": {
       "npm": {
         "filePath": "dist/bundle.js",
@@ -22,7 +22,8 @@
     "endowment:rpc": {
       "dapps": true,
       "snaps": false
-    }
+    },
+    "endowment:page-home": {}
   },
   "manifestVersion": "0.1"
 }
