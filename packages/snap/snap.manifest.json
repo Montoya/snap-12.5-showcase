@@ -1,5 +1,5 @@
 {
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Showcase of new Snaps features in MetaMask Extension 12.5",
   "proposedName": "Snaps Showcase 12.5",
   "repository": {
@@ -7,7 +7,7 @@
     "url": "https://github.com/Montoya/snap-12.5-showcase.git"
   },
   "source": {
-    "shasum": "YscvMBosRNmdMs57I1Z0ICBNdbECZMYFgTOtGdy57xw=",
+    "shasum": "7Eyev30OfQlUBDkrLwT0tlh0L8ZJU7lq6VdETMDInJ0=",
     "location": {
       "npm": {
         "filePath": "dist/bundle.js",

@@ -1,6 +1,6 @@
 {
   "name": "snap-showcase",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Showcase of new Snaps features in MetaMask Extension 12.5",
   "repository": {
     "type": "git",
