@@ -4,34 +4,37 @@ import {
   type OnUserInputHandler,
   type OnHomePageHandler,
 } from "@metamask/snaps-sdk";
-import { Container, Box, Section, Heading, Text, Bold, Footer, Button, Icon, Image, Link } from '@metamask/snaps-sdk/jsx';
-import arrow from "./../img/arrow.svg"
+import { Container, Box, Section, Heading, Text, Card, Footer, Button} from '@metamask/snaps-sdk/jsx';
+
+import icon from "./../img/icon.svg"
 
 export const onHomePage: OnHomePageHandler = async () => {
   return {
     content: (
       <Box>
+        <Card 
+          image={icon} 
+          title="Card title" 
+          description="Card description" 
+          value="Card value" 
+          extra="Extra value"
+        />
+        <Card 
+          title="Minimal card" 
+          value="Example value" 
+        />
         <Section>
-          <Heading>Hello world!</Heading>
-          <Text>Below is a showcase of features in MetaMask Extension 12.5.</Text>
-        </Section>
-        <Section>
-          <Heading>New Icon component!</Heading>
-          <Icon name="wifi"></Icon>
-          <Icon name="card" color="muted"></Icon>
-          <Icon name="home"></Icon>
-        </Section>
-        <Section>
-          <Text>Buttons can now wrap images and icons!</Text>
-          <Box>
-            <Button><Image src={arrow} /></Button>
-          </Box>
-          <Box>
-            <Button><Icon name="add"></Icon></Button>
-          </Box>
-        </Section>
-        <Section>
-          <Text>Learn more in our <Link href="https://docs.metamask.io/snaps/">documentation</Link>.</Text>
+          <Card 
+            image={icon} 
+            title="Card title" 
+            description="Card description" 
+            value="Card value" 
+            extra="Extra value"
+          />
+          <Card 
+            title="Minimal card" 
+            value="Example value" 
+          />
         </Section>
       </Box>
     ),
